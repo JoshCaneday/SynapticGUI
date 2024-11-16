@@ -18,9 +18,6 @@ func _on_exit_button_button_up():
 		parent.queue_free()
 	else: # Else lets just delete the tab, not the whole row
 		queue_free()
-	#print(parent.numRows)
-	#print(parent.numCols)
-	#print(parent.numTabs)
 
 # Called when press the drag button DOWN
 func _on_drag_button_button_down():
