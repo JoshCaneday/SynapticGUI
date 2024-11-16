@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-## My Name is Vu
+# My Name is Joshua
 var dragging = false
 var ghostTab: MarginContainer = null
 var mouse_position
