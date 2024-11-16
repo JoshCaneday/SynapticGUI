@@ -105,6 +105,8 @@ func createNewTab():
 		# Loop through all rows to find the row that does not have maximum amount of tabs in it
 		while curRow < get_child_count() and get_child(curRow).get_child_count() == self.maxCols:
 			curRow += 1
+			
+		# If the row that we are on is a new row, take this if statement
 		if curRow == self.numRows+1:
 			self.numRows += 1
 			new_row = HBoxContainer.new()
@@ -119,18 +121,21 @@ func createNewTab():
 			var rightPadColorRect = rightPad.get_child(0)
 			leftPadColorRect.color = Color(1,1,1,0)
 			rightPadColorRect.color = Color(1,1,1,0)
+			
+		# Else just set the row to the already made row
 		else:
 			new_row = get_child(curRow) # In this case its not really a new row, but im just going to use this variable
-			
+		
+		# Added a tab
 		self.numTabs += 1
 		
-		var tab_instance = TabScene.instantiate()
-		new_row.add_child(tab_instance)
-		new_row.move_child(tab_instance,tab_instance.get_index()-1)
+		var tab_instance = TabScene.instantiate() # Instantiate copy of tab scene
+		new_row.add_child(tab_instance) # Add it as child of the current row we are on
+		new_row.move_child(tab_instance,tab_instance.get_index()-1) # Move the tab to the proper position
 		
 		var exitButton = tab_instance.find_child("ExitButton")
 		exitButton.tree_exited.connect(updateDims) # When we delete this newly created tab (in this case when we press x button) we reorganize the dims in case something has changed
-		tab_instance.guiNode = get_parent().get_parent()
+		tab_instance.guiNode = get_parent().get_parent() # This is important as many of the tab's object's scripts require this variable to be used in its functions
 		tab_instance.isGhost = false # So as to not get confused with tabs that are duplicated and are considered ghost tabs
 		tab_instance.get_child(0).color = Color(randf(),randf(),randf())
 		
@@ -149,7 +154,7 @@ func _process(delta):
 		self.prevWindowSize = curScreenSize
 		updateDims()
 
-
+# Called whenever the open button is pressed
 func _on_open_button_button_up():
 	createNewTab()
 
