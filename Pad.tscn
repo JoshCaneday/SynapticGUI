@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddtd518od65xq"]
+
+[ext_resource type="Script" path="res://PadObject.gd" id="1_byxtv"]
+
+[node name="Pad" type="MarginContainer"]
+script = ExtResource("1_byxtv")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 2
+mouse_filter = 1
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

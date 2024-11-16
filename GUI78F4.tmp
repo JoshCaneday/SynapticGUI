@@ -1,0 +1,99 @@
+[gd_scene load_steps=3 format=3 uid="uid://cb8gjsadlqxpk"]
+
+[ext_resource type="Script" path="res://GUI.gd" id="1_jbogh"]
+[ext_resource type="Script" path="res://TabController.gd" id="2_dwij6"]
+
+[node name="Gui" type="CanvasLayer"]
+script = ExtResource("1_jbogh")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="MarginContainer"]
+layout_mode = 2
+color = Color(0.412152, 0.412152, 0.412152, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+script = ExtResource("2_dwij6")
+
+[node name="Header" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/VBoxContainer/Header"]
+layout_mode = 2
+color = Color(0.215902, 0.215902, 0.215902, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Header"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="LeftPadding" type="MarginContainer" parent="MarginContainer/VBoxContainer/Header/HBoxContainer"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="ProjectNameBox" type="MarginContainer" parent="MarginContainer/VBoxContainer/Header/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+
+[node name="ProjectName" type="Label" parent="MarginContainer/VBoxContainer/Header/HBoxContainer/ProjectNameBox"]
+layout_mode = 2
+text = "Synaptic GUI"
+horizontal_alignment = 1
+
+[node name="MiddlePadding" type="MarginContainer" parent="MarginContainer/VBoxContainer/Header/HBoxContainer"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="HelpButtonBox" type="MarginContainer" parent="MarginContainer/VBoxContainer/Header/HBoxContainer"]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+
+[node name="HelpButton" type="Button" parent="MarginContainer/VBoxContainer/Header/HBoxContainer/HelpButtonBox"]
+layout_mode = 2
+size_flags_vertical = 4
+text = "Help"
+
+[node name="MiddlePadding2" type="MarginContainer" parent="MarginContainer/VBoxContainer/Header/HBoxContainer"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="OpenTabButtonBox" type="MarginContainer" parent="MarginContainer/VBoxContainer/Header/HBoxContainer"]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+
+[node name="OpenButton" type="Button" parent="MarginContainer/VBoxContainer/Header/HBoxContainer/OpenTabButtonBox"]
+layout_mode = 2
+size_flags_vertical = 4
+text = "Open"
+
+[node name="MiddlePadding3" type="MarginContainer" parent="MarginContainer/VBoxContainer/Header/HBoxContainer"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="ConnectButtonBox" type="MarginContainer" parent="MarginContainer/VBoxContainer/Header/HBoxContainer"]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/Header/HBoxContainer/ConnectButtonBox"]
+layout_mode = 2
+size_flags_vertical = 4
+text = "Connect"
+
+[node name="MiddlePadding4" type="MarginContainer" parent="MarginContainer/VBoxContainer/Header/HBoxContainer"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="(blankbox)" type="MarginContainer" parent="MarginContainer/VBoxContainer/Header/HBoxContainer"]
+layout_mode = 2
+
+[node name="RightPadding" type="MarginContainer" parent="MarginContainer/VBoxContainer/Header/HBoxContainer"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[connection signal="button_up" from="MarginContainer/VBoxContainer/Header/HBoxContainer/OpenTabButtonBox/OpenButton" to="MarginContainer/VBoxContainer" method="_on_open_button_button_up"]

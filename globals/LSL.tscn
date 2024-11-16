@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpoqdo8m736nq"]
+
+[ext_resource type="Script" path="res://globals/LSL.gd" id="1_vbjcs"]
+
+[node name="LSL" type="Node"]
+script = ExtResource("1_vbjcs")

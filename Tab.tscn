@@ -1,0 +1,74 @@
+[gd_scene load_steps=2 format=3 uid="uid://dh7ivfh174qnq"]
+
+[ext_resource type="Script" path="res://TabObject.gd" id="1_1pdcg"]
+
+[node name="Tab" type="MarginContainer"]
+script = ExtResource("1_1pdcg")
+
+[node name="TabBackground" type="ColorRect" parent="."]
+layout_mode = 2
+mouse_filter = 1
+color = Color(0, 0, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="HeaderBox" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="HeaderBackground" type="ColorRect" parent="VBoxContainer/HeaderBox"]
+layout_mode = 2
+mouse_filter = 1
+color = Color(0.270222, 0.270222, 0.270222, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HeaderBox"]
+layout_mode = 2
+
+[node name="LeftPadding" type="MarginContainer" parent="VBoxContainer/HeaderBox/HBoxContainer"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="TabNameBox" type="MarginContainer" parent="VBoxContainer/HeaderBox/HBoxContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+
+[node name="TabName" type="OptionButton" parent="VBoxContainer/HeaderBox/HBoxContainer/TabNameBox"]
+layout_mode = 2
+item_count = 1
+popup/item_0/text = "None"
+popup/item_0/id = 0
+
+[node name="ExpandedMiddlePadding" type="MarginContainer" parent="VBoxContainer/HeaderBox/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="DragButtonBox" type="MarginContainer" parent="VBoxContainer/HeaderBox/HBoxContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+
+[node name="DragButton" type="Button" parent="VBoxContainer/HeaderBox/HBoxContainer/DragButtonBox"]
+layout_mode = 2
+text = "||||"
+
+[node name="MiddlePadding" type="MarginContainer" parent="VBoxContainer/HeaderBox/HBoxContainer"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="ExitButtonBox" type="MarginContainer" parent="VBoxContainer/HeaderBox/HBoxContainer"]
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 2
+
+[node name="ExitButton" type="Button" parent="VBoxContainer/HeaderBox/HBoxContainer/ExitButtonBox"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+text = "x"
+
+[node name="RightPadding" type="MarginContainer" parent="VBoxContainer/HeaderBox/HBoxContainer"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="button_down" from="VBoxContainer/HeaderBox/HBoxContainer/DragButtonBox/DragButton" to="." method="_on_drag_button_button_down"]
+[connection signal="button_up" from="VBoxContainer/HeaderBox/HBoxContainer/DragButtonBox/DragButton" to="." method="_on_drag_button_button_up"]
+[connection signal="button_up" from="VBoxContainer/HeaderBox/HBoxContainer/ExitButtonBox/ExitButton" to="." method="_on_exit_button_button_up"]
