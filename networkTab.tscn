@@ -1,0 +1,76 @@
+[gd_scene load_steps=2 format=3 uid="uid://c7c8sf8jtt4g"]
+
+[ext_resource type="Script" path="res://networkTab.gd" id="1_gct2k"]
+
+[node name="networkTabHolder" type="MarginContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_gct2k")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="DataTypes" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="DataType1" type="TextEdit" parent="HBoxContainer/DataTypes"]
+layout_mode = 2
+placeholder_text = "Enter Data Type"
+
+[node name="DataType2" type="TextEdit" parent="HBoxContainer/DataTypes"]
+layout_mode = 2
+placeholder_text = "Enter Data Type"
+
+[node name="DataType3" type="TextEdit" parent="HBoxContainer/DataTypes"]
+layout_mode = 2
+placeholder_text = "Enter Data Type"
+
+[node name="DataType4" type="TextEdit" parent="HBoxContainer/DataTypes"]
+layout_mode = 2
+placeholder_text = "Enter Data Type"
+
+[node name="StreamNames" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="StreamName1" type="TextEdit" parent="HBoxContainer/StreamNames"]
+layout_mode = 2
+placeholder_text = "Enter Stream Name"
+
+[node name="StreamName2" type="TextEdit" parent="HBoxContainer/StreamNames"]
+layout_mode = 2
+placeholder_text = "Enter Stream Name"
+
+[node name="StreamName3" type="TextEdit" parent="HBoxContainer/StreamNames"]
+layout_mode = 2
+placeholder_text = "Enter Stream Name"
+
+[node name="StreamName4" type="TextEdit" parent="HBoxContainer/StreamNames"]
+layout_mode = 2
+placeholder_text = "Enter Stream Name"
+
+[node name="ConnectButtons" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="ConnectButton1" type="Button" parent="HBoxContainer/ConnectButtons"]
+layout_mode = 2
+text = "Connect"
+
+[node name="ConnectButton2" type="Button" parent="HBoxContainer/ConnectButtons"]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+text = "Connect"
+
+[node name="ConnectButton3" type="Button" parent="HBoxContainer/ConnectButtons"]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+text = "Connect"
+
+[node name="ConnectButton4" type="Button" parent="HBoxContainer/ConnectButtons"]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+text = "Connect"
+
+[connection signal="button_down" from="HBoxContainer/ConnectButtons/ConnectButton1" to="." method="_on_connect_button_1_button_down"]
+[connection signal="button_down" from="HBoxContainer/ConnectButtons/ConnectButton2" to="." method="_on_connect_button_2_button_down"]
+[connection signal="button_down" from="HBoxContainer/ConnectButtons/ConnectButton3" to="." method="_on_connect_button_3_button_down"]
+[connection signal="button_down" from="HBoxContainer/ConnectButtons/ConnectButton4" to="." method="_on_connect_button_4_button_down"]
