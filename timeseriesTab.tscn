@@ -1,0 +1,301 @@
+[gd_scene load_steps=3 format=3 uid="uid://r3uwdi3qowva"]
+
+[ext_resource type="Script" path="res://timeseriesTab.gd" id="1_fbobd"]
+[ext_resource type="Script" path="res://Line2D.gd" id="2_ng5kt"]
+
+[node name="timeseriesTabHolder" type="MarginContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_fbobd")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="StreamButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Stream"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/VBoxContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Line2D" type="Line2D" parent="VBoxContainer/VBoxContainer/HBoxContainer/MarginContainer"]
+script = ExtResource("2_ng5kt")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Channel1Plus" type="Button" parent="VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "+"
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Channel1Minus" type="Button" parent="VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "-"
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/VBoxContainer/HBoxContainer/MarginContainer2"]
+layout_mode = 2
+text = "Channel 1"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/VBoxContainer/HBoxContainer2/MarginContainer"]
+layout_mode = 2
+
+[node name="Line2D" type="Line2D" parent="VBoxContainer/VBoxContainer/HBoxContainer2/MarginContainer"]
+script = ExtResource("2_ng5kt")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+
+[node name="Channel2Plus" type="Button" parent="VBoxContainer/VBoxContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+text = "+"
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+
+[node name="Channel2Minus" type="Button" parent="VBoxContainer/VBoxContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+text = "-"
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/VBoxContainer/HBoxContainer2/MarginContainer2"]
+layout_mode = 2
+text = "Channel 2"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/VBoxContainer/HBoxContainer3/MarginContainer"]
+layout_mode = 2
+
+[node name="Line2D" type="Line2D" parent="VBoxContainer/VBoxContainer/HBoxContainer3/MarginContainer"]
+script = ExtResource("2_ng5kt")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+
+[node name="Channel3Plus" type="Button" parent="VBoxContainer/VBoxContainer/HBoxContainer3/VBoxContainer"]
+layout_mode = 2
+text = "+"
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer3/VBoxContainer"]
+layout_mode = 2
+
+[node name="Channel3Minus" type="Button" parent="VBoxContainer/VBoxContainer/HBoxContainer3/VBoxContainer"]
+layout_mode = 2
+text = "-"
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/VBoxContainer/HBoxContainer3/MarginContainer2"]
+layout_mode = 2
+text = "Channel 3"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/VBoxContainer/HBoxContainer4/MarginContainer"]
+layout_mode = 2
+
+[node name="Line2D" type="Line2D" parent="VBoxContainer/VBoxContainer/HBoxContainer4/MarginContainer"]
+script = ExtResource("2_ng5kt")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+
+[node name="Channel4Plus" type="Button" parent="VBoxContainer/VBoxContainer/HBoxContainer4/VBoxContainer"]
+layout_mode = 2
+text = "+"
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer4/VBoxContainer"]
+layout_mode = 2
+
+[node name="Channel4Minus" type="Button" parent="VBoxContainer/VBoxContainer/HBoxContainer4/VBoxContainer"]
+layout_mode = 2
+text = "-"
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/VBoxContainer/HBoxContainer4/MarginContainer2"]
+layout_mode = 2
+text = "Channel 4"
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/VBoxContainer/HBoxContainer5/MarginContainer"]
+layout_mode = 2
+
+[node name="Line2D" type="Line2D" parent="VBoxContainer/VBoxContainer/HBoxContainer5/MarginContainer"]
+script = ExtResource("2_ng5kt")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+
+[node name="Channel5Plus" type="Button" parent="VBoxContainer/VBoxContainer/HBoxContainer5/VBoxContainer"]
+layout_mode = 2
+text = "+"
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer5/VBoxContainer"]
+layout_mode = 2
+
+[node name="Channel5Minus" type="Button" parent="VBoxContainer/VBoxContainer/HBoxContainer5/VBoxContainer"]
+layout_mode = 2
+text = "-"
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/VBoxContainer/HBoxContainer5/MarginContainer2"]
+layout_mode = 2
+text = "Channel 5"
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer6"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/VBoxContainer/HBoxContainer6/MarginContainer"]
+layout_mode = 2
+
+[node name="Line2D" type="Line2D" parent="VBoxContainer/VBoxContainer/HBoxContainer6/MarginContainer"]
+script = ExtResource("2_ng5kt")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer6"]
+layout_mode = 2
+
+[node name="Channel6Plus" type="Button" parent="VBoxContainer/VBoxContainer/HBoxContainer6/VBoxContainer"]
+layout_mode = 2
+text = "+"
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer6/VBoxContainer"]
+layout_mode = 2
+
+[node name="Channel6Minus" type="Button" parent="VBoxContainer/VBoxContainer/HBoxContainer6/VBoxContainer"]
+layout_mode = 2
+text = "-"
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer6"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/VBoxContainer/HBoxContainer6/MarginContainer2"]
+layout_mode = 2
+text = "Channel 6"
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer7"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/VBoxContainer/HBoxContainer7/MarginContainer"]
+layout_mode = 2
+
+[node name="Line2D" type="Line2D" parent="VBoxContainer/VBoxContainer/HBoxContainer7/MarginContainer"]
+script = ExtResource("2_ng5kt")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer7"]
+layout_mode = 2
+
+[node name="Channel7Plus" type="Button" parent="VBoxContainer/VBoxContainer/HBoxContainer7/VBoxContainer"]
+layout_mode = 2
+text = "+"
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer7/VBoxContainer"]
+layout_mode = 2
+
+[node name="Channel7Minus" type="Button" parent="VBoxContainer/VBoxContainer/HBoxContainer7/VBoxContainer"]
+layout_mode = 2
+text = "-"
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer7"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/VBoxContainer/HBoxContainer7/MarginContainer2"]
+layout_mode = 2
+text = "Channel 7"
+
+[node name="HBoxContainer8" type="HBoxContainer" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer8"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/VBoxContainer/HBoxContainer8/MarginContainer"]
+layout_mode = 2
+
+[node name="Line2D" type="Line2D" parent="VBoxContainer/VBoxContainer/HBoxContainer8/MarginContainer"]
+script = ExtResource("2_ng5kt")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer8"]
+layout_mode = 2
+
+[node name="Channel8Plus" type="Button" parent="VBoxContainer/VBoxContainer/HBoxContainer8/VBoxContainer"]
+layout_mode = 2
+text = "+"
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer8/VBoxContainer"]
+layout_mode = 2
+
+[node name="Channel8Minus" type="Button" parent="VBoxContainer/VBoxContainer/HBoxContainer8/VBoxContainer"]
+layout_mode = 2
+text = "-"
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer8"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/VBoxContainer/HBoxContainer8/MarginContainer2"]
+layout_mode = 2
+text = "Channel 8"
+
+[connection signal="button_down" from="VBoxContainer/StreamButton" to="." method="_on_stream_button_button_down"]
+[connection signal="button_down" from="VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/Channel1Plus" to="." method="_on_channel_1_plus_button_down"]
+[connection signal="button_down" from="VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/Channel1Minus" to="." method="_on_channel_1_minus_button_down"]
+[connection signal="button_down" from="VBoxContainer/VBoxContainer/HBoxContainer2/VBoxContainer/Channel2Plus" to="." method="_on_channel_2_plus_button_down"]
+[connection signal="button_down" from="VBoxContainer/VBoxContainer/HBoxContainer2/VBoxContainer/Channel2Minus" to="." method="_on_channel_2_minus_button_down"]
+[connection signal="button_down" from="VBoxContainer/VBoxContainer/HBoxContainer3/VBoxContainer/Channel3Plus" to="." method="_on_channel_3_plus_button_down"]
+[connection signal="button_down" from="VBoxContainer/VBoxContainer/HBoxContainer3/VBoxContainer/Channel3Minus" to="." method="_on_channel_3_minus_button_down"]
+[connection signal="button_down" from="VBoxContainer/VBoxContainer/HBoxContainer4/VBoxContainer/Channel4Plus" to="." method="_on_channel_4_plus_button_down"]
+[connection signal="button_down" from="VBoxContainer/VBoxContainer/HBoxContainer4/VBoxContainer/Channel4Minus" to="." method="_on_channel_4_minus_button_down"]
+[connection signal="button_down" from="VBoxContainer/VBoxContainer/HBoxContainer5/VBoxContainer/Channel5Plus" to="." method="_on_channel_5_plus_button_down"]
+[connection signal="button_down" from="VBoxContainer/VBoxContainer/HBoxContainer5/VBoxContainer/Channel5Minus" to="." method="_on_channel_5_minus_button_down"]
+[connection signal="button_down" from="VBoxContainer/VBoxContainer/HBoxContainer6/VBoxContainer/Channel6Plus" to="." method="_on_channel_6_plus_button_down"]
+[connection signal="button_down" from="VBoxContainer/VBoxContainer/HBoxContainer6/VBoxContainer/Channel6Minus" to="." method="_on_channel_6_minus_button_down"]
+[connection signal="button_down" from="VBoxContainer/VBoxContainer/HBoxContainer7/VBoxContainer/Channel7Plus" to="." method="_on_channel_7_plus_button_down"]
+[connection signal="button_down" from="VBoxContainer/VBoxContainer/HBoxContainer7/VBoxContainer/Channel7Minus" to="." method="_on_channel_7_minus_button_down"]
+[connection signal="button_down" from="VBoxContainer/VBoxContainer/HBoxContainer8/VBoxContainer/Channel8Plus" to="." method="_on_channel_8_plus_button_down"]
+[connection signal="button_down" from="VBoxContainer/VBoxContainer/HBoxContainer8/VBoxContainer/Channel8Minus" to="." method="_on_channel_8_minus_button_down"]
