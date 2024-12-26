@@ -7,7 +7,7 @@ using LSL;
 public partial class LSL_Inlet : Node
 {
     public StreamInfo[] stream_infos;
-    private StreamInlet stream_inlet;
+    private StreamInlet[] stream_inlet = new StreamInlet[4];
     public int num_channels;
 
     public override void _Ready() { }
@@ -15,7 +15,7 @@ public partial class LSL_Inlet : Node
     // This is a procedure that connects to a stream given certain properties
     // since we can't really pass around values within GDScript from C#
     // namely, C# types are not available to GDScript I don't think...
-    public void connect_to_stream(string prop, string value, int num_channels_)
+    public void connect_to_stream(string prop, string value, int num_channels_, int streamNum)
     {
         StreamInfo[] results = LSL.LSL.resolve_stream(prop, value, 1, 1.0);
         stream_infos = results;
@@ -23,20 +23,20 @@ public partial class LSL_Inlet : Node
         {
             return;
         }
-        stream_inlet = new StreamInlet(results[0]);
+        stream_inlet[streamNum-1] = new StreamInlet(results[0]);
         results.DisposeArray();
         num_channels = num_channels_;
     }
 
     // Takes no arguments with the assumption that global vars were previously set
-    public string[] pull_sample(float timeout)
+    public string[] pull_sample(float timeout, int streamNum)
     {
         string[] samples = new string[num_channels];
-        stream_inlet.pull_sample(samples, timeout);
+        stream_inlet[streamNum-1].pull_sample(samples, timeout);
         return samples;
     }
-    public bool has_stream_inlet()
+    public bool has_stream_inlet(int streamNum)
     {
-        return stream_inlet != null;
+        return stream_inlet[streamNum-1] != null;
     }
 }

@@ -14,23 +14,26 @@ func _ready():
 	pass
 
 
-func connect_to_stream(prop: String, value: String, num_channels: int):
+func connect_to_stream(prop: String, value: String, num_channels: int, streamNum: int):
 	# Connect to the stream given the correct parameters (Check C# script for more info as this is just calling that)
-	lsl_EEG_In.connect_to_stream(prop, value, num_channels)
+	lsl_EEG_In.connect_to_stream(prop, value, num_channels,streamNum)
 	
-func pull_sample(timeout: float):
+func pull_sample(timeout: float, streamNum: int):
 	# This will call the overloaded function in C# which utilizes stored
 	# variables within the C# class since GDScript has no access.
 	# This will return an array of floats of size `num_channels` defined
 	# in `connect_to_stream()`.
-	return lsl_EEG_In.pull_sample(timeout)
+	return lsl_EEG_In.pull_sample(timeout,streamNum)
+
+func prepare_outlet_stream(streamName: String, type: String, channelCount: int, streamNum: int):
+	lsl_Marker_Out.prepare_outlet_stream(streamName,type,channelCount,streamNum)
+
+
+func send_marker(sample: float, streamNum: int):
+	return lsl_Marker_Out.send_sample(sample,streamNum)
 	
-	
-func send_marker(marker: String):
-	return lsl_Marker_Out.SendMarker(marker)
-	
-func has_stream_inlet():
-	return lsl_EEG_In.has_stream_inlet()
+func has_stream_inlet(streamNum: int):
+	return lsl_EEG_In.has_stream_inlet(streamNum)
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 LSL="*res://globals/LSL.tscn"
 
+[display]
+
+window/size/mode=2
+
 [dotnet]
 
 project/assembly_name="SynapticGUI"
