@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{8D82D381-709F-43F4-BDC1-2E37C05ACF05}|SynapticGUI.csproj|solutionrelative:globals\\lsl_inlet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8D82D381-709F-43F4-BDC1-2E37C05ACF05}|SynapticGUI.csproj|c:\\users\\jcan2\\github\\synapticgui\\globals\\lsl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D82D381-709F-43F4-BDC1-2E37C05ACF05}|SynapticGUI.csproj|solutionrelative:globals\\lsl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8D82D381-709F-43F4-BDC1-2E37C05ACF05}|SynapticGUI.csproj|c:\\users\\jcan2\\github\\synapticgui\\globals\\lsl_mark_out.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8D82D381-709F-43F4-BDC1-2E37C05ACF05}|SynapticGUI.csproj|solutionrelative:globals\\lsl_mark_out.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D82D381-709F-43F4-BDC1-2E37C05ACF05}|SynapticGUI.csproj|c:\\users\\jcan2\\github\\synapticgui\\globals\\lsl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D82D381-709F-43F4-BDC1-2E37C05ACF05}|SynapticGUI.csproj|solutionrelative:globals\\lsl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,13 +26,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "LSL_Mark_Out.cs",
               "DocumentMoniker": "C:\\Users\\jcan2\\GitHub\\SynapticGUI\\globals\\LSL_Mark_Out.cs",
               "RelativeDocumentMoniker": "globals\\LSL_Mark_Out.cs",
               "ToolTip": "C:\\Users\\jcan2\\GitHub\\SynapticGUI\\globals\\LSL_Mark_Out.cs",
               "RelativeToolTip": "globals\\LSL_Mark_Out.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAA8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-23T20:56:06.293Z",
               "IsPinned": true,
@@ -46,20 +46,20 @@
               "RelativeDocumentMoniker": "globals\\LSL_Inlet.cs",
               "ToolTip": "C:\\Users\\jcan2\\GitHub\\SynapticGUI\\globals\\LSL_Inlet.cs",
               "RelativeToolTip": "globals\\LSL_Inlet.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAA0AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACMAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-23T20:56:05.486Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "LSL.cs",
               "DocumentMoniker": "C:\\Users\\jcan2\\GitHub\\SynapticGUI\\globals\\LSL.cs",
               "RelativeDocumentMoniker": "globals\\LSL.cs",
               "ToolTip": "C:\\Users\\jcan2\\GitHub\\SynapticGUI\\globals\\LSL.cs",
               "RelativeToolTip": "globals\\LSL.cs",
-              "ViewState": "AQIAAD4CAAAAAAAAAAAAAFkCAAAhAAAA",
+              "ViewState": "AQIAAJ4BAAAAAAAAAAAAAL4BAAB1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-23T20:55:54.286Z",
               "EditorCaption": ""
