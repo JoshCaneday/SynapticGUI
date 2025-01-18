@@ -13,64 +13,120 @@ layout_mode = 2
 [node name="DataTypes" type="VBoxContainer" parent="HBoxContainer"]
 layout_mode = 2
 
-[node name="DataType1" type="TextEdit" parent="HBoxContainer/DataTypes"]
+[node name="inletDataType1" type="TextEdit" parent="HBoxContainer/DataTypes"]
 layout_mode = 2
 placeholder_text = "Enter Data Type"
 
-[node name="DataType2" type="TextEdit" parent="HBoxContainer/DataTypes"]
+[node name="inletDataType2" type="TextEdit" parent="HBoxContainer/DataTypes"]
 layout_mode = 2
 placeholder_text = "Enter Data Type"
 
-[node name="DataType3" type="TextEdit" parent="HBoxContainer/DataTypes"]
+[node name="inletDataType3" type="TextEdit" parent="HBoxContainer/DataTypes"]
 layout_mode = 2
 placeholder_text = "Enter Data Type"
 
-[node name="DataType4" type="TextEdit" parent="HBoxContainer/DataTypes"]
+[node name="inletDataType4" type="TextEdit" parent="HBoxContainer/DataTypes"]
+layout_mode = 2
+placeholder_text = "Enter Data Type"
+
+[node name="outletDataType1" type="TextEdit" parent="HBoxContainer/DataTypes"]
+layout_mode = 2
+placeholder_text = "Enter Data Type"
+
+[node name="outletDataType2" type="TextEdit" parent="HBoxContainer/DataTypes"]
+layout_mode = 2
+placeholder_text = "Enter Data Type"
+
+[node name="outletDataType3" type="TextEdit" parent="HBoxContainer/DataTypes"]
+layout_mode = 2
+placeholder_text = "Enter Data Type"
+
+[node name="outletDataType4" type="TextEdit" parent="HBoxContainer/DataTypes"]
 layout_mode = 2
 placeholder_text = "Enter Data Type"
 
 [node name="StreamNames" type="VBoxContainer" parent="HBoxContainer"]
 layout_mode = 2
 
-[node name="StreamName1" type="TextEdit" parent="HBoxContainer/StreamNames"]
+[node name="inletStreamName1" type="TextEdit" parent="HBoxContainer/StreamNames"]
 layout_mode = 2
 placeholder_text = "Enter Stream Name"
 
-[node name="StreamName2" type="TextEdit" parent="HBoxContainer/StreamNames"]
+[node name="inletStreamName2" type="TextEdit" parent="HBoxContainer/StreamNames"]
 layout_mode = 2
 placeholder_text = "Enter Stream Name"
 
-[node name="StreamName3" type="TextEdit" parent="HBoxContainer/StreamNames"]
+[node name="inletStreamName3" type="TextEdit" parent="HBoxContainer/StreamNames"]
 layout_mode = 2
 placeholder_text = "Enter Stream Name"
 
-[node name="StreamName4" type="TextEdit" parent="HBoxContainer/StreamNames"]
+[node name="inletStreamName4" type="TextEdit" parent="HBoxContainer/StreamNames"]
+layout_mode = 2
+placeholder_text = "Enter Stream Name"
+
+[node name="outletStreamName1" type="TextEdit" parent="HBoxContainer/StreamNames"]
+layout_mode = 2
+placeholder_text = "Enter Stream Name"
+
+[node name="outletStreamName2" type="TextEdit" parent="HBoxContainer/StreamNames"]
+layout_mode = 2
+placeholder_text = "Enter Stream Name"
+
+[node name="outletStreamName3" type="TextEdit" parent="HBoxContainer/StreamNames"]
+layout_mode = 2
+placeholder_text = "Enter Stream Name"
+
+[node name="outletStreamName4" type="TextEdit" parent="HBoxContainer/StreamNames"]
 layout_mode = 2
 placeholder_text = "Enter Stream Name"
 
 [node name="ConnectButtons" type="VBoxContainer" parent="HBoxContainer"]
 layout_mode = 2
 
-[node name="ConnectButton1" type="Button" parent="HBoxContainer/ConnectButtons"]
+[node name="inletButton1" type="Button" parent="HBoxContainer/ConnectButtons"]
 layout_mode = 2
 text = "Connect"
 
-[node name="ConnectButton2" type="Button" parent="HBoxContainer/ConnectButtons"]
+[node name="inletButton2" type="Button" parent="HBoxContainer/ConnectButtons"]
 custom_minimum_size = Vector2(10, 10)
 layout_mode = 2
 text = "Connect"
 
-[node name="ConnectButton3" type="Button" parent="HBoxContainer/ConnectButtons"]
+[node name="inletButton3" type="Button" parent="HBoxContainer/ConnectButtons"]
 custom_minimum_size = Vector2(10, 10)
 layout_mode = 2
 text = "Connect"
 
-[node name="ConnectButton4" type="Button" parent="HBoxContainer/ConnectButtons"]
+[node name="inletButton4" type="Button" parent="HBoxContainer/ConnectButtons"]
 custom_minimum_size = Vector2(10, 10)
 layout_mode = 2
 text = "Connect"
 
-[connection signal="button_down" from="HBoxContainer/ConnectButtons/ConnectButton1" to="." method="_on_connect_button_1_button_down"]
-[connection signal="button_down" from="HBoxContainer/ConnectButtons/ConnectButton2" to="." method="_on_connect_button_2_button_down"]
-[connection signal="button_down" from="HBoxContainer/ConnectButtons/ConnectButton3" to="." method="_on_connect_button_3_button_down"]
-[connection signal="button_down" from="HBoxContainer/ConnectButtons/ConnectButton4" to="." method="_on_connect_button_4_button_down"]
+[node name="outletButton1" type="Button" parent="HBoxContainer/ConnectButtons"]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+text = "Connect"
+
+[node name="outletButton2" type="Button" parent="HBoxContainer/ConnectButtons"]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+text = "Connect"
+
+[node name="outletButton3" type="Button" parent="HBoxContainer/ConnectButtons"]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+text = "Connect"
+
+[node name="outletButton4" type="Button" parent="HBoxContainer/ConnectButtons"]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+text = "Connect"
+
+[connection signal="button_down" from="HBoxContainer/ConnectButtons/inletButton1" to="." method="_on_inlet_button_1_button_down"]
+[connection signal="button_down" from="HBoxContainer/ConnectButtons/inletButton2" to="." method="_on_inlet_button_2_button_down"]
+[connection signal="button_down" from="HBoxContainer/ConnectButtons/inletButton3" to="." method="_on_inlet_button_3_button_down"]
+[connection signal="button_down" from="HBoxContainer/ConnectButtons/inletButton4" to="." method="_on_inlet_button_4_button_down"]
+[connection signal="button_down" from="HBoxContainer/ConnectButtons/outletButton1" to="." method="_on_outlet_button_1_button_down"]
+[connection signal="button_down" from="HBoxContainer/ConnectButtons/outletButton2" to="." method="_on_outlet_button_2_button_down"]
+[connection signal="button_down" from="HBoxContainer/ConnectButtons/outletButton3" to="." method="_on_outlet_button_3_button_down"]
+[connection signal="button_down" from="HBoxContainer/ConnectButtons/outletButton4" to="." method="_on_outlet_button_4_button_down"]

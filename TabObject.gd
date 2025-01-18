@@ -55,13 +55,13 @@ func _on_mouse_exited():
 func convertToNetworkTab():
 	var newContent = networkTab.instantiate()
 	newContent.tabSize = custom_minimum_size
-	newContent.resize()
+	#newContent.resize()
 	self.contentHolder.add_child(newContent)
 
 func convertToTimeseriesTab():
 	var newContent = timeseriesTab.instantiate()
 	newContent.tabSize = custom_minimum_size
-	newContent.resize()
+	#newContent.resize()
 	self.contentHolder.add_child(newContent)
 
 func _on_tab_name_item_selected(index):

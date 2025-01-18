@@ -22,8 +22,8 @@ func _ready():
 	self.prevWindowSize = screenSize # Set this object var to our current screenSize, will need for _process function as we need to know when we change size of screen
 	headerNode.parentSize = self.prevWindowSize
 	headerNode.updateDims()
-	self.screenWidth = screenSize.x - 0.1*screenSize.x # We subtract 10 percent of the width for the width of the left and right padding of each row
-	self.screenHeight = screenSize.y - headerNode.custom_minimum_size.y #This is just subtracting the height of the header that will always be at the top of the UI
+	self.screenWidth = 0.9*self.prevWindowSize[0] # We subtract 10 percent of the width for the width of the left and right padding of each row
+	self.screenHeight = self.prevWindowSize[1] - headerNode.custom_minimum_size.y #This is just subtracting the height of the header that will always be at the top of the UI
 	self.TabScene = preload("res://Tab.tscn") # Load up the tab scene (think of prefabs from Unity if you have knowledge about that)
 	self.PadScene = preload("res://Pad.tscn") # Load up the pad scene (think of prefabs from Unity if you have knowledge about that)
 	
@@ -92,7 +92,7 @@ func createNewTab():
 		
 		# Create new row (Hbox)
 		var new_row = HBoxContainer.new()
-		new_row.add_theme_constant_override("separation",0)
+		new_row.add_theme_constant_override("separation",1)
 		add_child(new_row) # Add it as child to the VBoxContainer
 		
 		# Padding needed for adding columns
@@ -140,11 +140,10 @@ func createNewTab():
 			
 		# If the row that we are on is a new row, take this if statement
 		if curRow == self.numRows+1:
-			#print(self.numsRows,self.rowsLimit)
 			if self.numRows+1 <= self.rowsLimit:
 				self.numRows += 1
 				new_row = HBoxContainer.new()
-				new_row.add_theme_constant_override("separation",0)
+				new_row.add_theme_constant_override("separation",1)
 				add_child(new_row)
 				var leftPad = PadScene.instantiate()
 				var rightPad = PadScene.instantiate()
