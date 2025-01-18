@@ -12,12 +12,16 @@ config_version=5
 
 config/name="SynapticGUI"
 run/main_scene="res://GUI.tscn"
-config/features=PackedStringArray("4.3", "GL Compatibility")
+config/features=PackedStringArray("4.2", "C#", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 LSL="*res://globals/LSL.tscn"
+
+[display]
+
+window/size/mode=2
 
 [dotnet]
 

@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dh7ivfh174qnq"]
+[gd_scene load_steps=3 format=3 uid="uid://dh7ivfh174qnq"]
 
 [ext_resource type="Script" path="res://TabObject.gd" id="1_1pdcg"]
+[ext_resource type="Script" path="res://TabHeaderSizing.gd" id="2_arldc"]
 
 [node name="Tab" type="MarginContainer"]
 script = ExtResource("1_1pdcg")
@@ -12,9 +13,11 @@ color = Color(0, 0, 0, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
+theme_override_constants/separation = 0
 
 [node name="HeaderBox" type="MarginContainer" parent="VBoxContainer"]
 layout_mode = 2
+script = ExtResource("2_arldc")
 
 [node name="HeaderBackground" type="ColorRect" parent="VBoxContainer/HeaderBox"]
 layout_mode = 2
@@ -23,52 +26,100 @@ color = Color(0.270222, 0.270222, 0.270222, 1)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HeaderBox"]
 layout_mode = 2
+theme_override_constants/separation = 0
 
-[node name="LeftPadding" type="MarginContainer" parent="VBoxContainer/HeaderBox/HBoxContainer"]
-custom_minimum_size = Vector2(10, 0)
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HeaderBox/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="LeftPadding" type="MarginContainer" parent="VBoxContainer/HeaderBox/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="TabNameBox" type="MarginContainer" parent="VBoxContainer/HeaderBox/HBoxContainer"]
-custom_minimum_size = Vector2(80, 0)
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/HeaderBox/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="TabNameBox" type="MarginContainer" parent="VBoxContainer/HeaderBox/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 
-[node name="TabName" type="OptionButton" parent="VBoxContainer/HeaderBox/HBoxContainer/TabNameBox"]
+[node name="TabName" type="OptionButton" parent="VBoxContainer/HeaderBox/HBoxContainer/VBoxContainer2/TabNameBox"]
 layout_mode = 2
-item_count = 1
+alignment = 1
+text_overrun_behavior = 3
+clip_text = true
+item_count = 3
 popup/item_0/text = "None"
 popup/item_0/id = 0
+popup/item_1/text = "Network"
+popup/item_1/id = 1
+popup/item_2/text = "TimeSeries"
+popup/item_2/id = 2
 
-[node name="ExpandedMiddlePadding" type="MarginContainer" parent="VBoxContainer/HeaderBox/HBoxContainer"]
+[node name="VBoxContainer3" type="VBoxContainer" parent="VBoxContainer/HeaderBox/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="MiddlePadding" type="MarginContainer" parent="VBoxContainer/HeaderBox/HBoxContainer/VBoxContainer3"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="DragButtonBox" type="MarginContainer" parent="VBoxContainer/HeaderBox/HBoxContainer"]
-custom_minimum_size = Vector2(50, 0)
+[node name="VBoxContainer4" type="VBoxContainer" parent="VBoxContainer/HeaderBox/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 0
+
+[node name="DragButtonBox" type="MarginContainer" parent="VBoxContainer/HeaderBox/HBoxContainer/VBoxContainer4"]
 layout_mode = 2
 
-[node name="DragButton" type="Button" parent="VBoxContainer/HeaderBox/HBoxContainer/DragButtonBox"]
+[node name="DragButton" type="Button" parent="VBoxContainer/HeaderBox/HBoxContainer/VBoxContainer4/DragButtonBox"]
 layout_mode = 2
 text = "||||"
 
-[node name="MiddlePadding" type="MarginContainer" parent="VBoxContainer/HeaderBox/HBoxContainer"]
-custom_minimum_size = Vector2(10, 0)
+[node name="VBoxContainer5" type="VBoxContainer" parent="VBoxContainer/HeaderBox/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="MiddlePadding2" type="MarginContainer" parent="VBoxContainer/HeaderBox/HBoxContainer/VBoxContainer5"]
 layout_mode = 2
 
-[node name="ExitButtonBox" type="MarginContainer" parent="VBoxContainer/HeaderBox/HBoxContainer"]
-custom_minimum_size = Vector2(25, 0)
+[node name="VBoxContainer6" type="VBoxContainer" parent="VBoxContainer/HeaderBox/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="ExitButtonBox" type="MarginContainer" parent="VBoxContainer/HeaderBox/HBoxContainer/VBoxContainer6"]
 layout_mode = 2
 
-[node name="ExitButton" type="Button" parent="VBoxContainer/HeaderBox/HBoxContainer/ExitButtonBox"]
+[node name="ExitButton" type="Button" parent="VBoxContainer/HeaderBox/HBoxContainer/VBoxContainer6/ExitButtonBox"]
 custom_minimum_size = Vector2(20, 20)
 layout_mode = 2
 text = "x"
 
-[node name="RightPadding" type="MarginContainer" parent="VBoxContainer/HeaderBox/HBoxContainer"]
-custom_minimum_size = Vector2(10, 0)
+[node name="VBoxContainer7" type="VBoxContainer" parent="VBoxContainer/HeaderBox/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="RightPadding" type="MarginContainer" parent="VBoxContainer/HeaderBox/HBoxContainer/VBoxContainer7"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="leftPadding" type="MarginContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Content" type="MarginContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="rightPadding" type="MarginContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Bottom" type="MarginContainer" parent="VBoxContainer"]
 layout_mode = 2
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
-[connection signal="button_down" from="VBoxContainer/HeaderBox/HBoxContainer/DragButtonBox/DragButton" to="." method="_on_drag_button_button_down"]
-[connection signal="button_up" from="VBoxContainer/HeaderBox/HBoxContainer/DragButtonBox/DragButton" to="." method="_on_drag_button_button_up"]
-[connection signal="button_up" from="VBoxContainer/HeaderBox/HBoxContainer/ExitButtonBox/ExitButton" to="." method="_on_exit_button_button_up"]
+[connection signal="item_selected" from="VBoxContainer/HeaderBox/HBoxContainer/VBoxContainer2/TabNameBox/TabName" to="." method="_on_tab_name_item_selected"]
+[connection signal="button_down" from="VBoxContainer/HeaderBox/HBoxContainer/VBoxContainer4/DragButtonBox/DragButton" to="." method="_on_drag_button_button_down"]
+[connection signal="button_up" from="VBoxContainer/HeaderBox/HBoxContainer/VBoxContainer4/DragButtonBox/DragButton" to="." method="_on_drag_button_button_up"]
+[connection signal="button_up" from="VBoxContainer/HeaderBox/HBoxContainer/VBoxContainer6/ExitButtonBox/ExitButton" to="." method="_on_exit_button_button_up"]
